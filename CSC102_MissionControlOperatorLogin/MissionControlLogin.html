@@ -1,0 +1,81 @@
+<!-- Created by Vincent Gizzarelli for CSC 102 Mission Control Operator Login Assignment -->
+<!DOCTYPE html>
+	<head>
+		<title>Mission Control Operator Login</title>
+	</head>
+	<body>
+		<!-- This is a form for getting the user's first name, last name, and badge number-->
+		<form style="background-color:#D8DAD9;" id="form" onsubmit="return false">
+			<fieldset>
+
+				<legend>Name and Badge Number</legend>
+
+				<p><label for="fname">First Name:</label></p>	
+				<input type="text" id="fname" name="fname">
+				<br>
+				
+				<p><label for="lname">Last Name:</label></p>
+				<input type="text" id="lname" name="lname">
+				<br>
+
+				<p><label for="bnum">Badge Number:</label></p>
+				<input type="text" id="bnum" name="bnum">
+				<br><br>
+
+				<input type="submit" value="Submit" id="sname">
+
+			</fieldset>
+		</form>
+
+		<!--These p tags are used to welcome the user and give them their badge number when they successfully log in -->
+		<strong>
+		<p class="fullname" id="fullname"> </p>
+		<p class="badenumber" id="badgenumber"></p>
+		</strong>
+
+		<script>
+
+			//This function checks the form inputs to ensure all 3 fields have values are not empty
+			function checkform(form) {
+				var inputs = form.getElementsByTagName('input');
+				for (var i = 0; i < inputs.length; i++) {
+					if(inputs[i].value == ""){
+						alert("Please fill in all required fields");
+						return false;
+					}
+				}
+				return true;
+			}
+
+			//This function checks to see if the submit button has been clicked
+			document.getElementById('sname').onclick = function() {
+
+			//Gets the form values and sets them to javascript variables
+				var fname = document.getElementById("fname").value;
+				var lname = document.getElementById("lname").value;
+				var badgenumber = document.getElementById("bnum").value;
+				var fullname = fname + ' ' + lname;
+
+
+			//This calls the checkform function to ensure all values aren't blank 
+				if (checkform(document.getElementById("form"))) {
+			//If the values aren't blank then this checks to make sure the name and badge number isn't too long
+					if (fullname.length > 20) {	
+						alert("Name is too long!");
+					} else if (parseInt(badgenumber) > 1000) {
+						alert("badge number is too long!");
+					} else {
+						Welcome(fullname, badgenumber);
+					}
+				}
+			};
+
+			//The welcome function changes the above p tag values to welcome the user and give them their badge number
+			function Welcome(fullname, badgenumber){
+				document.getElementById("fullname").innerHTML = 'Welcome ' + fullname + '!';
+				document.getElementById("badgenumber").innerHTML = 'Badge Number: ' + badgenumber;
+			}
+
+		</script>
+	</body>
+</html>
