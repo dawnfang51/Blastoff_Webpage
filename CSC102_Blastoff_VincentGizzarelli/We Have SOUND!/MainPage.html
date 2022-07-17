@@ -1,0 +1,121 @@
+<!-- This document was created by Vincent Gizzarelli for CSC102 Event Driven Programming Buttons Assignment-->
+<!DOCTYPE html>
+	<head>
+		<title>Programming Buttons Assignment</title>
+	</head>
+
+	<!--The body style is for the background gradient -->
+	<body style="background: linear-gradient(to right, #ffffff 0%, #33ccff 100%);">
+		<!-- This line plays an Lab Ambiance mp3 file which autostarts and loops-->
+		<audio src="Sounds/LabAmbiance.mp3" loop="true" autoplay="true"></audio>
+		<!--The div tags and style prevents the "UAT Space Program Text" from showing up on a new line -->
+		<div style="display:inline-block;vertical-align: top;">
+			<img src="UATspaceLogo.png" alt="img"/> 
+		</div>
+		<div style="display:inline-block;">
+		<br><br><br><br>
+		<h1>UAT Space Program</h1>
+		</div>
+		<br><br>
+		<!--Long table created with all the values from the screenshot posted in assignment -->
+		<table border=1 width=60% style="background: linear-gradient(to bottom, #ffffff 0%, #66ccff 200%);">
+			<col style="width:50%">
+			<tr>
+				<td><strong>Data Time</strong></td>
+				<td><strong>Reading</strong></td>
+			</tr>
+				<td>Time elapsed:</td>
+				<td>15 seconds</td>
+			<tr>
+				<td>Latitude:</td>
+				<td>0</td>
+			</tr>
+
+			<tr>
+				<td>Longitude:</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>GPS Altitude</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>BMP Sensor Altitude:</td>
+				<td>30383.04</td>
+			</tr>
+			<tr>
+				<td>BMP Sensor Pressure:</td>
+				<td>2.34</td>
+			</tr>
+			<tr>
+				<td>BMP Sensor Temperature:</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Digital Sensor Temperature:</td>
+				<td>24.12</td>
+			</tr>
+			<tr>
+				<td>CSS Sensor Temperature:</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>CSS Sensor eC02:</td>
+				<td>400</td>
+			</tr>
+			<tr>
+				<td>CSS Sensor TV0C:</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>UV:</td>
+				<td>0</td>
+			</tr>
+			<tr>
+				<td>Accel X:</td>
+				<td>-0.87</td>
+			</tr>
+			<tr>
+				<td>Accel Y:</td>
+				<td>-0.02</td>
+			</tr>
+			<tr>
+				<td>Accel Z:</td>
+				<td>9.61</td>
+			</tr>
+			<tr>
+				<td>Magnetic X:</td>
+				<td>0.13</td>
+			</tr>
+			<tr>
+				<td>Magnetic Y:</td>
+				<td>0.57</td>
+			</tr>
+			<tr>
+				<td>Magnetic Z:</td>
+				<td>-0.24</td>
+			</tr>
+			<tr>
+				<td>Gyro X:</td>
+				<td>4.66</td>
+			</tr>
+			<tr>
+				<td>Gyro Y:</td>
+				<td>0.01</td>
+			</tr>
+			<tr>
+				<td>Gyro Z:</td>
+				<td>-0.4</td>
+			</tr>
+		</table>
+		<br><br>
+		<!--Added buttons with onclick function to enable the opposite button and disable the clicked button -->
+		<div>
+			<button type="button" id="start" onclick="Start();" style="height:30px; width:70px">Start</button>
+			<button type="button" id="stop" onclick="Stop();" style="height:30px; width:70px">Stop</button>
+		</div>
+		<script src="ButtonControl.js">
+			
+		</script>
+	</body>
+</html>
