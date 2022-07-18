@@ -1,0 +1,29 @@
+#body {
+	background: linear-gradient(to right, #ffffff 0%, #33ccff 100%);
+}
+
+#logo {
+	display: inline-block;vertical-align: top;
+}
+
+#start {
+	height:30px; 
+	width:70px;
+}
+
+#stop {
+	height:30px; 
+	width:70px;
+}
+
+#table {
+	background: linear-gradient(to bottom, #ffffff 0%, #66ccff 200%);
+}
+
+#tablecolumn {
+	width:50%;
+}
+
+#header {
+	font-family: "Lucida Console", "Courier New", monospace;
+}
